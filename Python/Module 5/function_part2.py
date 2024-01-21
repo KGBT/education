@@ -89,23 +89,28 @@ def simple_num(arr: 'list[int]') -> int:
 
 
 def delete_elements(arr: 'list[int]', number) -> int:
-    del_elements = 0
-    for i in arr:
-        if i == number:
-            arr.remove(i)
-            del_elements += 1
+    # Первый вариант
+    #del_elements = 0
+    # for i in arr:
+    #     if i == number:
+    #         arr.remove(i)
+    #         del_elements += 1
+    # Второй вариант
+    del_elements = arr.count(number)
+    for _ in range(del_elements):
+        arr.remove(number)
     return del_elements
 
 
-# print("Задание 4.")
-# arr = [randint(1, 20) for _ in range(20)]
-# print(f"Наш список: {arr}")
-# try:
-#     number = int(input("Введите число для удаления: "))
-#     print(f"Количество удаленных элементов: {delete_elements(arr, number)}")
-#     print(f"Список после удаления: {arr}")
-# except ValueError:
-#     print("Введен не тот тип. Ожидалось int.")
+print("Задание 4.")
+arr = [randint(1, 20) for _ in range(20)]
+print(f"Наш список: {arr}")
+try:
+    number = int(input("Введите число для удаления: "))
+    print(f"Количество удаленных элементов: {delete_elements(arr, number)}")
+    print(f"Список после удаления: {arr}")
+except ValueError:
+    print("Введен не тот тип. Ожидалось int.")
 
 
 """
@@ -144,8 +149,8 @@ def list_degree(arr: list, degree: int) -> list:
     return degree_list
 
 
-print("Задание 6.")
-arr = [randint(1, 10) for i in range(10)]
-print(f"Список: {arr}")
-new_arr = list_degree(arr, 2)
-print(f"Новый список: {new_arr}")
+# print("Задание 6.")
+# arr = [randint(1, 10) for i in range(10)]
+# print(f"Список: {arr}")
+# new_arr = list_degree(arr, 2)
+# print(f"Новый список: {new_arr}")
