@@ -107,7 +107,7 @@ def display_books(name_books: list, year_books: list) -> None:
 #     if j < len(right_1):
 #         arr_1.extend(right_1[j:])
 #         arr_2.extend(right_2[i:])
-#     return (arr_1, arr_2)
+#     return [arr_1, arr_2]
 #
 #
 # def divide_books(name_books: list, year_books: list, predicate=True) -> tuple:
